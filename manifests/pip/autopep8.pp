@@ -1,10 +1,11 @@
-# Install python module autopep8
+# Install python module autopep8: A tool that automatically formats Python code to conform to the PEP 8 style guide
 #
 # @example basic usage
-#   include vbase::software::python::autopep8
+#   include vpython::pup::autopep8
+#
 # Copyright 2017 valsr
 class vpython::pip::autopep8{
-  python::pip{'autopep8':
+  python::pip{'system-autopep8':
     ensure  => latest,
     pkgname => 'autopep8'
   }
