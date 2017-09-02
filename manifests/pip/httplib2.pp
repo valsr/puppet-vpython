@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::httplib2{
-  python::pip{'system-httplib2':
-    ensure  => latest,
-    pkgname => 'httplib2'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-httplib2',
+    default => 'python-httplib2'
   }
+  v_ensure_packages($package)
 }

@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::pycparser{
-  python::pip{'system-pycparser':
-    ensure  => latest,
-    pkgname => 'pycparser'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-pycparser',
+    default => 'python-pycparser'
   }
+  v_ensure_packages($package)
 }

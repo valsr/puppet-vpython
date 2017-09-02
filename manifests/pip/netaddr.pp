@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::netaddr{
-  python::pip{'system-netaddr':
-    ensure  => latest,
-    pkgname => 'netaddr'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-netaddr',
+    default => 'python-netaddr'
   }
+  v_ensure_packages($package)
 }

@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::keyring{
-  python::pip{'system-keyring':
-    ensure  => latest,
-    pkgname => 'keyring'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-keyring',
+    default => 'python-keyring'
   }
+  v_ensure_packages($package)
 }

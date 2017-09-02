@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::kivy{
-  python::pip{'system-kivy':
-    ensure  => latest,
-    pkgname => 'kivy'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-kivy',
+    default => 'python-kivy'
   }
+  v_ensure_packages($package)
 }

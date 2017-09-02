@@ -5,10 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::gmpy2{
-  v_ensure_packages('libgmp-dev')
-  python::pip{'system-gmpy2':
-    ensure  => latest,
-    pkgname => 'gmpy2',
-    require => Package['libgmp-dev']
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-gmpy2',
+    default => 'python-gmpy2'
   }
+  v_ensure_packages($package)
 }

@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::cython{
-  python::pip{'system-Cython':
-    ensure  => latest,
-    pkgname => 'Cython'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'cython3',
+    default => 'cython'
   }
+  v_ensure_packages($package)
 }

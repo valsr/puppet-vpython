@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::memprof{
-  python::pip{'system-memprof':
-    ensure  => latest,
-    pkgname => 'memprof'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-memprof',
+    default => 'python-memprof'
   }
+  v_ensure_packages($package)
 }

@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::geopy{
-  python::pip{'system-geopy':
-    ensure  => latest,
-    pkgname => 'geopy'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-geopy',
+    default => 'python-geopy'
   }
+  v_ensure_packages($package)
 }

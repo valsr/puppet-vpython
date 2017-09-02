@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::coverage{
-  python::pip{'system-coverage':
-    ensure  => latest,
-    pkgname => 'coverage'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-coverage',
+    default => 'python-coverage'
   }
+  v_ensure_packages($package)
 }

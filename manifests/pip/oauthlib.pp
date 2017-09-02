@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::oauthlib{
-  python::pip{'system-oauthlib':
-    ensure  => latest,
-    pkgname => 'oauthlib'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-oauthlib',
+    default => 'python-oauthlib'
   }
+  v_ensure_packages($package)
 }

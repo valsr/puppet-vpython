@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::pyaudio{
-  python::pip{'system-PyAudio':
-    ensure  => latest,
-    pkgname => 'PyAudio'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-pyaudio',
+    default => 'python-pyaudio'
   }
+  v_ensure_packages($package)
 }

@@ -5,8 +5,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::binaryornot{
-  python::pip{'system-binaryornot':
-    ensure  => latest,
-    pkgname => 'binaryornot'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-binaryornot',
+    default => 'python-binaryornot'
   }
+  v_ensure_packages($package)
 }

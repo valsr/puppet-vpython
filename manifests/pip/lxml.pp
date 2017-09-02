@@ -6,8 +6,9 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::lxml{
-  python::pip{'system-lxml':
-    ensure  => latest,
-    pkgname => 'lxml'
+  $package = $::python::version ?{
+    /^(python)?3/ => 'python3-lxml',
+    default => 'python-lxml'
   }
+  v_ensure_packages($package)
 }
