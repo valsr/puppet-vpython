@@ -43,14 +43,13 @@ Including vpython will install a default python 3 enviroment:
 include vpython
 ```
 
-#### Hiera PIP modules
+## Usage
 
-Since this module uses the stankevich-python module pip, dot, and pyenvs may be setup via hiera using the
-**python::python_pips**, **python::python_dots**, **python_pyvenvs** lookup keys. See the module documentation for more
-information.
+Installing Python modules can be accomplished in three ways - classes, pip, and hiera. It is recommended to always use
+classes when possible as they will attempt to install the package native module if possible, if not it will fallback
+to pip installation.
 
-
-#### Class PIP modules
+### Class PIP modules
 
 Modules can be installed by including the correct class as found under pip. This simply calls the pip command wit the
 correct name.
@@ -58,9 +57,23 @@ correct name.
 include vpython::pip::autopep8
 ```
 
-## Usage
+### PIP installation
 
-N/A
+You can also install modules using the python::pip resource declaration as well. Ensure that you have selected an
+unique name when doing so.
+
+```.pp
+python::pip{'my-autopep8':
+    ensure => present,
+    package => 'autopep8'
+    }
+```
+
+### Hiera PIP modules
+
+Since this module uses the stankevich-python module pip, dot, and pyenvs may be setup via hiera using the
+**python::python_pips**, **python::python_dots**, **python_pyvenvs** lookup keys. See the module documentation for more
+information.
 
 ## Reference
 
