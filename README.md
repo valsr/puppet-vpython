@@ -1,6 +1,6 @@
 # vpython
 
-#### Table of Contents
+## Table of Contents
 
 1. [Description](#description)
 1. [Setup - The basics of getting started with vpython](#setup)
@@ -11,73 +11,88 @@
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 1. [Limitations - OS compatibility, etc.](#limitations)
 1. [Development - Guide for contributing to the module](#development)
+1. [Release Notes](#release-notes)
 
 ## Description
 
-Start with a one- or two-sentence summary of what the module does and/or what
-problem it solves. This is your 30-second elevator pitch for your module.
-Consider including OS/Puppet version it works with.
-
-You can give more descriptive information in a second paragraph. This paragraph
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?" If your module has a range of functionality (installation, configuration,
-management, etc.), this is the time to mention it.
+vpython module installs and configures Python3 environment. Is addition, it plays nice with other modules allowing
+ad-hoc (runtime) module installation, configuration.
 
 ## Setup
 
-### What vpython affects **OPTIONAL**
+At most you will need to have vdata installed in order to use hiera data lookups.
 
-If it's obvious what your module touches, you can skip this section. For
-example, folks can probably figure out that your mysql_instance module affects
-their MySQL instances.
+### What vpython affects
 
-If there's more that they should know about, though, this is the place to mention:
+* Python3 installation (pip, python, virtualenv)
+* Python pip managed modules
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
+### Setup requirements
 
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you might want to include an additional "Upgrading" section
-here.
+Requires stankevich-python module from forge.
 
 ### Beginning with vpython
 
-The very basic steps needed for a user to get the module up and running. This
-can include setup steps, if necessary, or it can be an example of the most
-basic use of the module.
+Including vpython will install a default python 3 enviroment:
+
+- installs python3
+- installs pip3
+- installs virtualenv
+
+```.pp
+include vpython
+```
 
 ## Usage
 
-This section is where you describe how to customize, configure, and do the
-fancy stuff with your module here. It's especially helpful if you include usage
-examples and code samples for doing things with your module.
+Installing Python modules can be accomplished in three ways - classes, pip, and hiera. It is recommended to always use
+classes when possible as they will attempt to install the package native module if possible, if not it will fallback
+to pip installation.
+
+### Class PIP modules
+
+Modules can be installed by including the correct class as found under pip. This simply calls the pip command wit the
+correct name.
+```.pp
+include vpython::pip::autopep8
+```
+
+### PIP installation
+
+You can also install modules using the python::pip resource declaration as well. Ensure that you have selected an
+unique name when doing so.
+
+```.pp
+python::pip{'my-autopep8':
+    ensure => present,
+    package => 'autopep8'
+    }
+```
+
+### Hiera PIP modules
+
+Since this module uses the stankevich-python module pip, dot, and pyenvs may be setup via hiera using the
+**python::python_pips**, **python::python_dots**, **python_pyvenvs** lookup keys. See the module documentation for more
+information.
 
 ## Reference
 
-Here, include a complete list of your module's classes, types, providers,
-facts, along with the parameters for each. Users refer to this section (thus
-the name "Reference") to find specific details; most users don't read it per
-se.
+> Generate documents first by running **puppet strings generate**
+
+See [doc/index.html](doc/index.html) for reference documentation.
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc. If there
-are Known Issues, you might want to include them under their own heading here.
+Module build against Puppet 5.
+
+Tested on:
+
+- Ubuntu 16.04 LTS
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## Release Notes/Contributors/Etc. **Optional**
+## Release Notes
 
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You can also add any additional sections you feel
-are necessary or important to include here. Please use the `## ` header.
+See [CHANGELOG.md](CHANGELOG.md)
