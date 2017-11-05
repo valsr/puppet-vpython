@@ -2,8 +2,12 @@
 
 [< back to readme](README.md)
 
-## 0.1.0 (TBD)
+## 1.1.0 (2017-11-04)
 
-TBD
+Added new modules: glances, pymdstats
+
+## 1.0.0 (2017-10-25)
+
+Initial release
 
 **Release Manager**: valsr <valsr@valsr.com>
