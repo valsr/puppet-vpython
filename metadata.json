@@ -6,24 +6,18 @@
     "license": "MIT",
     "source": "https://github.com/valsr/pr-puppet-vpython",
     "project_page": "https://github.com/valsr/pr-puppet-vpython",
-	"issues_url": "https://github.com/valsr/pr-puppet-vpython/issues",
+    "issues_url": "https://github.com/valsr/pr-puppet-vpython/issues",
     "dependencies": [
-        {"name":"puppetlabs-stdlib","version_requirement":">= 2.x"},
-        {"name":"stankevich-python", "version_requirement":">=1.x"}
+        {"name":"puppetlabs-stdlib","version_requirement":"4.x"},
+        {"name":"stankevich-python", "version_requirement":"1.x"}
     ],
     "data_provider": "hiera",
     "operatingsystem_support": [
-        {
-            "operatingsystem": "Ubuntu",
-            "operatingsystemrelease" : ["16.04"]
-        }
+        {"operatingsystem": "Ubuntu", "operatingsystemrelease" : ["16.04"]}
     ],
     "requirements": [
-        {
-            "name":"puppet",
-            "version_requirement": "4.x"
-        }
+        {"name":"puppet", "version_requirement": "4.x"}
     ],
     "description": "",
-    "tags": ["python"],
+    "tags": ["python"]
 }
