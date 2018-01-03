@@ -2,6 +2,12 @@
 
 [< back to readme](README.md)
 
+## 1.1.2 (2018-01-04)
+
+Fixed issue with improperly formated metadata.json
+
+**Release Manager**: valsr <valsr@valsr.com>
+
 ## 1.1.1 (2017-11-12)
 
 Updated metadata.json to meet coding standards
