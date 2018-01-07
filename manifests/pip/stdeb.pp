@@ -5,6 +5,8 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::stdeb{
+  require vpython::pip::setuptools
+  
   python::pip{'system-stdeb':
     ensure  => latest,
     pkgname => 'stdeb'
