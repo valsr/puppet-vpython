@@ -8,8 +8,8 @@ class vpython {
   $ensure = lookup('policy::software::install', Any, 'first', latest)
 
   class {'python':
-    version    => 'python3',
     ensure     => $ensure,
+    version    => 'python3',
     pip        => $ensure,
     virtualenv => $ensure,
     dev        => $ensure
