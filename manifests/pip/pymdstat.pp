@@ -5,6 +5,8 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::pymdstat{
+  require vpython::pip::setuptools
+  
   python::pip{'system-pymdstat':
     ensure  => latest,
     pkgname => 'pymdstat'

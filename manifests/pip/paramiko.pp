@@ -5,6 +5,8 @@
 #
 # Copyright 2017 valsr
 class vpython::pip::paramiko{
+  require vpython::pip::setuptools
+  
   python::pip{'system-paramiko':
     ensure  => latest,
     pkgname => 'paramiko'
