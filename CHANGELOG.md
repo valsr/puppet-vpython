@@ -2,6 +2,12 @@
 
 [< back to readme](README.md)
 
+## 1.1.4 (2018-02-16)
+
+Reformated metadata.json file
+
+**Release Manager**: valsr <valsr@valsr.com>
+
 ## 1.1.3 (2018-01-07)
 
 Added missing setuptools module.

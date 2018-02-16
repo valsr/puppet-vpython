@@ -1,23 +1,35 @@
 {
-    "name": "valsr-vpython",
-    "version": "1.1.3",
-    "author": "valsr",
-    "summary": "Manages python3 enviroment installation and modules",
-    "license": "MIT",
-    "source": "https://github.com/valsr/pr-puppet-vpython",
-    "project_page": "https://github.com/valsr/pr-puppet-vpython",
-    "issues_url": "https://github.com/valsr/pr-puppet-vpython/issues",
-    "dependencies": [
-        {"name":"puppetlabs-stdlib","version_requirement":"4.x"},
-        {"name":"stankevich-python", "version_requirement":"1.x"}
+  "name": "valsr-vpython",
+  "version": "1.1.4",
+  "author": "valsr",
+  "summary": "Manages python3 enviroment installation and modules",
+  "license": "MIT",
+  "source": "https://github.com/valsr/pr-puppet-vpython",
+  "project_page": "https://github.com/valsr/pr-puppet-vpython",
+  "issues_url": "https://github.com/valsr/pr-puppet-vpython/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": "4.x"
+    },
+    {
+      "name": "stankevich-python",
+      "version_requirement": "1.x"
+    }
     ],
-    "data_provider": "hiera",
-    "operatingsystem_support": [
-        {"operatingsystem": "Ubuntu", "operatingsystemrelease" : ["16.04"]}
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": ["16.04"]
+    }
     ],
-    "requirements": [
-        {"name":"puppet", "version_requirement": "4.x"}
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "4.x"
+    }
     ],
-    "description": "",
-    "tags": ["python"]
+  "description": "",
+  "tags": ["python"]
 }
