@@ -2,9 +2,15 @@
 
 [< back to readme](README.md)
 
+## 1.2.0 (2018-02-16)
+
+Added pycups module
+
+**Release Manager**: valsr <valsr@valsr.com>
+
 ## 1.1.4 (2018-02-16)
 
-Reformated metadata.json file
+Re-formatted metadata.json file
 
 **Release Manager**: valsr <valsr@valsr.com>
 
