@@ -2,6 +2,12 @@
 
 [< back to readme](README.md)
 
+## 1.3.0 (2018-02-25)
+
+Added pybluez module
+
+**Release Manager**: valsr <valsr@valsr.com>
+
 ## 1.2.0 (2018-02-16)
 
 Added pycups module
