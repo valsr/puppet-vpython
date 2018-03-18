@@ -4,48 +4,48 @@
 
 ## 1.3.0 (2018-02-25)
 
-Added pybluez module
+:star2: added pybluez module
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.2.0 (2018-02-16)
 
-Added pycups module
+:star2: added pycups module
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.1.4 (2018-02-16)
 
-Re-formatted metadata.json file
+:hammer: re-formatted metadata.json file
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.1.3 (2018-01-07)
 
-Added missing setuptools module.
+:star2: added missing setuptools module.
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.1.2 (2018-01-04)
 
-Fixed issue with improperly formatted metadata.json
+:hammer: fixed issue with improperly formatted metadata.json
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.1.1 (2017-11-12)
 
-Updated metadata.json to meet coding standards
+:hammer: updated metadata.json to meet coding standards
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.1.0 (2017-11-04)
 
-Added new modules: glances, pymdstats
+:star2: added new modules: glances, pymdstats
 
 **Release Manager**: valsr <valsr@valsr.com>
 
 ## 1.0.0 (2017-10-25)
 
-Initial release
+:sparkle: initial release
 
 **Release Manager**: valsr <valsr@valsr.com>
