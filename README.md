@@ -2,16 +2,16 @@
 
 ## Table of Contents
 
-1. [Description](#description)
-1. [Setup - The basics of getting started with vpython](#setup)
+1.  [Description](#description)
+1.  [Setup - The basics of getting started with vpython](#setup)
     * [What vpython affects](#what-vpython-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with vpython](#beginning-with-vpython)
-1. [Usage - Configuration options and additional functionality](#usage)
-1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-1. [Limitations - OS compatibility, etc.](#limitations)
-1. [Development - Guide for contributing to the module](#development)
-1. [Release Notes](#release-notes)
+1.  [Usage - Configuration options and additional functionality](#usage)
+1.  [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+1.  [Limitations - OS compatibility, etc.](#limitations)
+1.  [Development - Guide for contributing to the module](#development)
+1.  [Release Notes](#release-notes)
 
 ## Description
 
@@ -35,9 +35,9 @@ Requires stankevich-python module from forge.
 
 Including vpython will install a default python 3 enviroment:
 
-- installs python3
-- installs pip3
-- installs virtualenv
+* installs python3
+* installs pip3
+* installs virtualenv
 
 ```.pp
 include vpython
@@ -53,6 +53,7 @@ to pip installation.
 
 Modules can be installed by including the correct class as found under pip. This simply calls the pip command wit the
 correct name.
+
 ```.pp
 include vpython::pip::autopep8
 ```
@@ -87,7 +88,7 @@ Module build against Puppet 5.
 
 Tested on:
 
-- Ubuntu 16.04 LTS
+* Ubuntu 16.04 LTS
 
 ## Development
 
