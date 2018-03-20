@@ -6,9 +6,11 @@
 # Copyright 2017 valsr
 class vpython::pip::paramiko{
   require vpython::pip::setuptools
-  
+
+  v_ensure_packages(['libssl-dev'])
   python::pip{'system-paramiko':
     ensure  => latest,
-    pkgname => 'paramiko'
+    pkgname => 'paramiko',
+    require => Package['libssl-dev']
   }
 }
