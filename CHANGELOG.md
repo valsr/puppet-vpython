@@ -2,6 +2,12 @@
 
 [< back to readme](README.md)
 
+## 1.4.0 (2018-03-29)
+
+:star2: added python apt module
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 1.3.1 (2018-03-20)
 
 * :hammer: fixed paramiko module requiring openssl
