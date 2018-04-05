@@ -2,6 +2,13 @@
 
 [< back to readme](README.md)
 
+## 1.5.0 (2018-04-05)
+
+* :exclamation: configured to use hiera module data
+* :hammer: fixed project dependencies
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 1.4.0 (2018-03-29)
 
 :star2: added python apt module
