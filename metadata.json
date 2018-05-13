@@ -1,6 +1,6 @@
 {
   "name": "valsr-vpython",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "author": "valsr",
   "summary": "Manages python3 enviroment installation and modules",
   "license": "MIT",
