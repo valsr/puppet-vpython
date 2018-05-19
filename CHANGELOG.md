@@ -2,6 +2,12 @@
 
 [< back to readme](README.md)
 
+## 1.7.0 (2018-05-19)
+
+:star2: added python module apport and problem-report
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 1.6.0 (2018-05-12)
 
 :star2: added python numpy module
