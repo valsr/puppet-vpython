@@ -9,8 +9,9 @@ class vpython::pip::paramiko{
 
   v_ensure_packages(['libssl-dev'])
   python::pip{'system-paramiko':
-    ensure  => latest,
-    pkgname => 'paramiko',
-    require => Package['libssl-dev']
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'paramiko',
+    require      => Package['libssl-dev']
   }
 }

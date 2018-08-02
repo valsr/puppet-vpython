@@ -7,7 +7,8 @@
 # Copyright 2018 valsr
 class vpython::pip::apt{
   python::pip{'system-apt':
-    ensure  => latest,
-    pkgname => 'apt'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'apt'
   }
 }

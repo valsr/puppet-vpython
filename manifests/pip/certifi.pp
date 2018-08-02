@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::certifi{
   python::pip{'system-certifi':
-    ensure  => latest,
-    pkgname => 'certifi'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'certifi'
   }
 }

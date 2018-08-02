@@ -7,7 +7,8 @@
 # Copyright 2017 valsr
 class vpython::pip::css_html_js_minify{
   python::pip{'system-css-html-js-minify':
-    ensure  => latest,
-    pkgname => 'css-html-js-minify'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'css-html-js-minify'
   }
 }

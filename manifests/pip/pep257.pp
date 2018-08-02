@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::pep257{
   python::pip{'system-pep257':
-    ensure  => latest,
-    pkgname => 'pep257'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'pep257'
   }
 }

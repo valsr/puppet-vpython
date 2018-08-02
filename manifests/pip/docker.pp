@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::docker{
   python::pip{'system-docker':
-    ensure  => latest,
-    pkgname => 'docker'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'docker'
   }
 }

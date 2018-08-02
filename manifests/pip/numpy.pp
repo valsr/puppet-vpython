@@ -7,7 +7,8 @@
 # Copyright 2017 valsr
 class vpython::pip::numpy{
   python::pip{'system-numpy':
-    ensure  => latest,
-    pkgname => 'numpy'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'numpy'
   }
 }

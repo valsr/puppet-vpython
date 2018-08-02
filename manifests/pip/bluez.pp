@@ -6,7 +6,8 @@
 # Copyright 2018 valsr
 class vpython::pip::bluez{
   python::pip{'system-bluez':
-    ensure  => latest,
-    pkgname => 'pybluez'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'pybluez'
   }
 }
