@@ -2,6 +2,12 @@
 
 [< back to readme](README.md)
 
+## 1.7.1 (2018-08-02)
+
+:hammer: migrated python module to puppet-python
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 1.7.0 (2018-05-19)
 
 :star2: added python module apport and problem-report
@@ -16,8 +22,8 @@
 
 ## 1.5.0 (2018-04-05)
 
-* :exclamation: configured to use hiera module data
-* :hammer: fixed project dependencies
+- :exclamation: configured to use hiera module data
+- :hammer: fixed project dependencies
 
 **Release Manager**: valsr <mailto:valsr@valsr.com>
 
@@ -29,8 +35,8 @@
 
 ## 1.3.1 (2018-03-20)
 
-* :hammer: fixed paramiko module requiring openssl
-* :hammer: reformatted markdown files
+- :hammer: fixed paramiko module requiring openssl
+- :hammer: reformatted markdown files
 
 **Release Manager**: valsr <mailto:valsr@valsr.com>
 
