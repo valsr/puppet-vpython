@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::setuptools{
   python::pip{'system-setuptools':
-    ensure  => latest,
-    pkgname => 'setuptools'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'setuptools'
   }
 }

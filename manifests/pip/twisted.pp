@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::twisted{
   python::pip{'system-Twisted':
-    ensure  => latest,
-    pkgname => 'Twisted'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'Twisted'
   }
 }

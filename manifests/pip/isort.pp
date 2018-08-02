@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::isort{
   python::pip{'system-isort':
-    ensure  => latest,
-    pkgname => 'isort'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'isort'
   }
 }

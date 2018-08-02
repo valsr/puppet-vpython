@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::make_deb{
   python::pip{'system-make-deb':
-    ensure  => latest,
-    pkgname => 'make-deb'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'make-deb'
   }
 }

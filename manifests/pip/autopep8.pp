@@ -6,7 +6,8 @@
 # Copyright 2017 valsr
 class vpython::pip::autopep8{
   python::pip{'system-autopep8':
-    ensure  => latest,
-    pkgname => 'autopep8'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'autopep8'
   }
 }

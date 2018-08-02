@@ -6,7 +6,8 @@
 # Copyright 2018 valsr
 class vpython::pip::pycups{
   python::pip{'system-pycups':
-    ensure  => latest,
-    pkgname => 'pycups'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'pycups'
   }
 }

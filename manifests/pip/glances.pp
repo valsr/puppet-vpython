@@ -6,9 +6,10 @@
 # Copyright 2017 valsr
 class vpython::pip::glances{
   require vpython::pip::setuptools
-  
+
   python::pip{'system-glances':
-    ensure  => latest,
-    pkgname => 'glances'
+    ensure       => latest,
+    pip_provider => 'pip3',
+    pkgname      => 'glances'
   }
 }
