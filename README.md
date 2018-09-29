@@ -1,99 +1,95 @@
+
 # vpython
 
-## Table of Contents
+Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules.html .
 
-1.  [Description](#description)
-1.  [Setup - The basics of getting started with vpython](#setup)
+The README template below provides a starting point with details about what information to include in your README.
+
+
+
+
+
+
+
+#### Table of Contents
+
+1. [Description](#description)
+2. [Setup - The basics of getting started with vpython](#setup)
     * [What vpython affects](#what-vpython-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with vpython](#beginning-with-vpython)
-1.  [Usage - Configuration options and additional functionality](#usage)
-1.  [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-1.  [Limitations - OS compatibility, etc.](#limitations)
-1.  [Development - Guide for contributing to the module](#development)
-1.  [Release Notes](#release-notes)
+3. [Usage - Configuration options and additional functionality](#usage)
+4. [Limitations - OS compatibility, etc.](#limitations)
+5. [Development - Guide for contributing to the module](#development)
 
 ## Description
 
-vpython module installs and configures Python3 environment. Is addition, it plays nice with other modules allowing
-ad-hoc (runtime) module installation, configuration.
+Briefly tell users why they might want to use your module. Explain what your module does and what kind of problems users can solve with it.
+
+This should be a fairly short description helps the user decide if your module is what they want.
+
 
 ## Setup
 
-At most you will need to have vdata installed in order to use hiera data lookups.
+### What vpython affects **OPTIONAL**
 
-### What vpython affects
+If it's obvious what your module touches, you can skip this section. For example, folks can probably figure out that your mysql_instance module affects their MySQL instances.
 
-* Python3 installation (pip, python, virtualenv)
-* Python pip managed modules
+If there's more that they should know about, though, this is the place to mention:
 
-### Setup requirements
+* Files, packages, services, or operations that the module will alter, impact, or execute.
+* Dependencies that your module automatically installs.
+* Warnings or other important notices.
 
-Requires stankevich-python module from forge.
+### Setup Requirements **OPTIONAL**
+
+If your module requires anything extra before setting up (pluginsync enabled, another module, etc.), mention it here.
+
+If your most recent release breaks compatibility or requires particular steps for upgrading, you might want to include an additional "Upgrading" section here.
 
 ### Beginning with vpython
 
-Including vpython will install a default python 3 enviroment:
-
-* installs python3
-* installs pip3
-* installs virtualenv
-
-```.pp
-include vpython
-```
+The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
 
 ## Usage
 
-Installing Python modules can be accomplished in three ways - classes, pip, and hiera. It is recommended to always use
-classes when possible as they will attempt to install the package native module if possible, if not it will fallback
-to pip installation.
-
-### Class PIP modules
-
-Modules can be installed by including the correct class as found under pip. This simply calls the pip command wit the
-correct name.
-
-```.pp
-include vpython::pip::autopep8
-```
-
-### PIP installation
-
-You can also install modules using the python::pip resource declaration as well. Ensure that you have selected an
-unique name when doing so.
-
-```.pp
-python::pip{'my-autopep8':
-    ensure => present,
-    package => 'autopep8'
-    }
-```
-
-### Hiera PIP modules
-
-Since this module uses the stankevich-python module pip, dot, and pyenvs may be setup via hiera using the
-**python::python_pips**, **python::python_dots**, **python_pyvenvs** lookup keys. See the module documentation for more
-information.
+Include usage examples for common use cases in the **Usage** section. Show your users how to use your module to solve problems, and be sure to include code examples. Include three to five examples of the most important or common tasks a user can accomplish with your module. Show users how to accomplish more complex tasks that involve different types, classes, and functions working in tandem.
 
 ## Reference
 
-> Generate documents first by running **puppet strings generate**
+This section is deprecated. Instead, add reference information to your code as Puppet Strings comments, and then use Strings to generate a REFERENCE.md in your module. For details on how to add code comments and generate documentation with Strings, see the Puppet Strings [documentation](https://puppet.com/docs/puppet/latest/puppet_strings.html) and [style guide](https://puppet.com/docs/puppet/latest/puppet_strings_style.html)
 
-See [doc/index.html](doc/index.html) for reference documentation.
+If you aren't ready to use Strings yet, manually create a REFERENCE.md in the root of your module directory and list out each of your module's classes, defined types, facts, functions, Puppet tasks, task plans, and resource types and providers, along with the parameters for each.
+
+For each element (class, defined type, function, and so on), list:
+
+  * The data type, if applicable.
+  * A description of what the element does.
+  * Valid values, if the data type doesn't make it obvious.
+  * Default value, if any.
+
+For example:
+
+```
+### `pet::cat`
+
+#### Parameters
+
+##### `meow`
+
+Enables vocalization in your cat. Valid options: 'string'.
+
+Default: 'medium-loud'.
+```
 
 ## Limitations
 
-Module build against Puppet 5.
-
-Tested on:
-
-* Ubuntu 16.04 LTS
+In the Limitations section, list any incompatibilities, known issues, or other warnings.
 
 ## Development
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+In the Development section, tell other users the ground rules for contributing to your project and how they should submit their work.
 
-## Release Notes
+## Release Notes/Contributors/Etc. **Optional**
 
-See [CHANGELOG.md](CHANGELOG.md)
+If you aren't using changelog, put your release notes here (though you should consider using changelog). You can also add any additional sections you feel are necessary or important to include here. Please use the `## ` header.

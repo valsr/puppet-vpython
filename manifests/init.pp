@@ -1,11 +1,11 @@
-# Install python 3.x environment. At the present this installs pyhon, dev package, pip and virtualenv.
+# Install python 3.x environment. At the present this installs python, dev package, pip and virtualenv.
 #
-# @example basic usage
-#   include vbase::software::python
+# @summary Install python environment
 #
-# Copyright 2017 valsr
+# @example
+#   include vpython
 class vpython {
-  $ensure = lookup('policy::software::install', Any, 'first', latest)
+  $ensure = lookup('policy::software::install', Any, 'first', 'latest')
 
   class {'python':
     ensure     => $ensure,
