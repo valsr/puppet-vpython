@@ -2,6 +2,8 @@
 # See https://github.com/puppetlabs/puppetlabs_spec_helper#using-fixtures for details
 ---
 fixtures:
+  symlinks:
+    vcommon:     "#{source_dir}/../vcommon"
   forge_modules:
     python:      "puppet/python"
     stdlib:      "puppetlabs/stdlib"
