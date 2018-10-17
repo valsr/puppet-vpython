@@ -23,12 +23,6 @@
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "8"
-      ]
-    },
-    {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "18.04"
@@ -44,10 +38,10 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.7.0 < 6.0.0"
+      "version_requirement": ">= 5.0.0 < 6.0.0"
     }
   ],
-  "pdk-version": "1.7.0",
+  "pdk-version": "1.7.1",
   "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
-  "template-ref": "1.7.0-0-g57412ed"
+  "template-ref": "1.7.1-0-g810b982"
 }

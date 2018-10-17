@@ -2,6 +2,10 @@
 
 [< back to readme](README.md)
 
+## 2.0.0 (2018-10-31)
+
+??TBD
+
 ## 1.7.1 (2018-08-02)
 
 :hammer: migrated python module to puppet-python

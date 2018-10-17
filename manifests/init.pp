@@ -4,14 +4,12 @@
 #
 # @example
 #   include vpython
-class vpython {
-  $ensure = lookup('policy::software::install', Any, 'first', 'latest')
-
+class vpython{
   class {'python':
-    ensure     => $ensure,
+    ensure     => vcommon::get_policy('software::install', 'python'),
     version    => 'python3',
-    pip        => $ensure,
-    virtualenv => $ensure,
-    dev        => $ensure
+    pip        => vcommon::get_policy('software::install', 'python::pip'),
+    virtualenv => vcommon::get_policy('software::install', 'python::virtualenv'),
+    dev        => vcommon::get_policy('software::install', 'python::dev')
   }
 }
