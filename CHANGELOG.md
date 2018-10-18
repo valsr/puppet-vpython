@@ -2,9 +2,12 @@
 
 [< back to readme](README.md)
 
-## 2.0.0 (2018-10-31)
+## 2.0.0 (2018-10-18)
 
-??TBD
+:exclamation: now a public repository -> added licenses, project level files, unit tests
+:exclamation: renamed vpython::pip to vpython::module
+:exclamation: migrated to pdk
+:hammer: fixed dependencies versions
 
 ## 1.7.1 (2018-08-02)
 
