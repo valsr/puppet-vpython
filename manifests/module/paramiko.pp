@@ -9,7 +9,7 @@ class vpython::module::paramiko{
 
   v_ensure_packages('libssl-dev')
   python::pip{'paramiko':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::paramiko'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::paramiko'),
     pip_provider => 'pip3',
     require      => Package['libssl-dev']
   }

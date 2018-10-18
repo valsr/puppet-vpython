@@ -6,7 +6,7 @@
 #   include vpython::module::twisted
 class vpython::module::twisted{
   python::pip{'Twisted':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::twisted'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::twisted'),
     pip_provider => 'pip3'
   }
 }

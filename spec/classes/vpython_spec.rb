@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'vpython' do
@@ -7,14 +9,14 @@ describe 'vpython' do
 
       it { is_expected.to compile.with_all_deps }
 
-      it "contains python class" do
+      it 'contains python class' do
         is_expected.to contain_class('python')
           .with(
-            :ensure => 'latest',
-            :version => 'python3',
-            :pip => 'latest',
-            :virtualenv => 'latest',
-            :dev => 'latest'
+            ensure: 'latest',
+            version: 'python3',
+            pip: 'latest',
+            virtualenv: 'latest',
+            dev: 'latest',
           )
       end
     end

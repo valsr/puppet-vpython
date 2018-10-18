@@ -6,7 +6,7 @@
 #   include vpython::pup::autopep8
 class vpython::module::autopep8{
   python::pip{'autopep8':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::autopep8'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::autopep8'),
     pip_provider => 'pip3'
   }
 }

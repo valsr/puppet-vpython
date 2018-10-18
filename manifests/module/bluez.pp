@@ -6,7 +6,7 @@
 #   include vpython::module::bluez
 class vpython::module::bluez{
   python::pip{'pybluez':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::pybluez'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::pybluez'),
     pip_provider => 'pip3'
   }
 }

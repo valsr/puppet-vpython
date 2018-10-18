@@ -6,7 +6,7 @@
 #   include vpython::module::pep257
 class vpython::module::pep257{
   python::pip{'pep257':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::pep257'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::pep257'),
     pip_provider => 'pip3'
   }
 }

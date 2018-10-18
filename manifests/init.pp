@@ -6,10 +6,10 @@
 #   include vpython
 class vpython{
   class {'python':
-    ensure     => vcommon::get_policy('software::install', 'python'),
+    ensure     => vcommon::policy('software::install', 'python'),
     version    => 'python3',
-    pip        => vcommon::get_policy('software::install', 'python::pip'),
-    virtualenv => vcommon::get_policy('software::install', 'python::virtualenv'),
-    dev        => vcommon::get_policy('software::install', 'python::dev')
+    pip        => vcommon::policy('software::install', 'python::pip'),
+    virtualenv => vcommon::policy('software::install', 'python::virtualenv'),
+    dev        => vcommon::policy('software::install', 'python::dev')
   }
 }

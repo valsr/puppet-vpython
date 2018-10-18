@@ -6,7 +6,7 @@
 #   include vpython::module::certifi
 class vpython::module::certifi{
   python::pip{'certifi':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::certifi'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::certifi'),
     pip_provider => 'pip3'
   }
 }

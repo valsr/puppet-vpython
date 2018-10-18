@@ -5,6 +5,5 @@
 # @example basic usage
 #   include vpython::module::hunspell
 class vpython::module::hunspell{
-  $package = $::python::version ?{
-  v_ensure_packages(python3-hunspell)
+  v_ensure_packages('python3-hunspell')
 }

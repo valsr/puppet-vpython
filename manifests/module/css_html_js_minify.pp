@@ -7,7 +7,7 @@
 #   include vpython::module::css_html_js_minify
 class vpython::module::css_html_js_minify{
   python::pip{'css-html-js-minify':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::css-html-js-minify'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::css-html-js-minify'),
     pip_provider => 'pip3'
   }
 }

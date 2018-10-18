@@ -6,7 +6,7 @@
 #   include vpython::module::docker
 class vpython::module::docker{
   python::pip{'docker':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::docker'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::docker'),
     pip_provider => 'pip3'
   }
 }

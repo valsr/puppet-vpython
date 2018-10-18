@@ -8,7 +8,7 @@ class vpython::module::glances{
   require vpython::module::setuptools
 
   python::pip{'glances':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::glances'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::glances'),
     pip_provider => 'pip3'
   }
 }

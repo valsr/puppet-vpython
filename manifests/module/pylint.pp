@@ -8,7 +8,7 @@
 # Copyright 2017 valsr
 class vpython::module::pylint{
   python::pip{'pylint':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::pylint'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::pylint'),
     pip_provider => 'pip3'
   }
 }

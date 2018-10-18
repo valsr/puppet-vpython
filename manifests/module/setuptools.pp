@@ -6,7 +6,7 @@
 #   include vpython::module::setuptools
 class vpython::module::setuptools{
   python::pip{'setuptools':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::setuptools'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::setuptools'),
     pip_provider => 'pip3',
   }
 }

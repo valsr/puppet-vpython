@@ -6,7 +6,7 @@
 #   include vpython::module::docker_pycreds
 class vpython::module::docker_pycreds{
   python::pip{'docker-pycreds':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::docker_pycreds'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::docker_pycreds'),
     pip_provider => 'pip3'
   }
 }

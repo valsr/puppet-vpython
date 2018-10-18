@@ -5,6 +5,5 @@
 # @example basic usage
 #   include vpython::module::keyring
 class vpython::module::keyring{
-  $package = $::python::version ?{
   v_ensure_packages('python3-keyring')
 }

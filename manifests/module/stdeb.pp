@@ -8,7 +8,7 @@ class vpython::module::stdeb{
   require vpython::module::setuptools
 
   python::pip{'stdeb':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::stdeb'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::stdeb'),
     pip_provider => 'pip3'
   }
 }

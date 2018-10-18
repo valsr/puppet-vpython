@@ -5,6 +5,5 @@
 # @example basic usage
 #   include vpython::module::pyaudio
 class vpython::module::pyaudio{
-  $package = $::python::version ?{
   v_ensure_packages('python3-pyaudio')
 }

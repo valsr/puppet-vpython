@@ -8,7 +8,7 @@
 # Copyright 2018 valsr
 class vpython::module::pycups{
   python::pip{'pycups':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::pycups'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::pycups'),
     pip_provider => 'pip3'
   }
 }

@@ -7,7 +7,7 @@
 #   include vpython::module::numpy
 class vpython::module::numpy{
   python::pip{'numpy':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::numpy'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::numpy'),
     pip_provider => 'pip3'
   }
 }

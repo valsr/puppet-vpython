@@ -7,7 +7,7 @@
 #   include vpython::module::apt
 class vpython::module::apt{
   python::pip{'apt':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::apt'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::apt'),
     pip_provider => 'pip3'
   }
 }

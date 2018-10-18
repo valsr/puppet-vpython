@@ -6,7 +6,7 @@
 #   include vpython::module::make_deb
 class vpython::module::make_deb{
   python::pip{'make-deb':
-    ensure       => vcommon::get_policy('software::install', 'vpython::module::pybluez'),
+    ensure       => vcommon::policy('software::install', 'vpython::module::pybluez'),
     pip_provider => 'pip3'
   }
 }
