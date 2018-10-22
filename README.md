@@ -32,9 +32,10 @@ Installation of python packages
 
 ### Setup Requirements **OPTIONAL**
 
-This module depends on **valsr-vcommon** to provide v_ensure_packages. See www.github.com/valsr/puppet-common for
-explanation of what this functions does (TL;DR it provides ability to specify package versions to be installed via
-hiera). Furthermore, **puppet-python** is used to provide python environment and PIP module installation.
+This module depends on **valsr-vcommon** to provide v_ensure_packages. See
+[www.github.com/valsr/puppet-vcommon](www.github.com/valsr/puppet-vcommon) for explanation of what this functions does
+(TL;DR it provides ability to specify package versions to be installed via hiera). Furthermore, **puppet-python** is
+used to provide python environment and PIP module installation.
 
 ### Beginning with vpython
 
