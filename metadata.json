@@ -1,39 +1,47 @@
 {
   "name": "valsr-vpython",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "author": "valsr",
-  "summary": "Manages python3 enviroment installation and modules",
-  "license": "MIT",
-  "source": "https://github.com/valsr/pr-puppet-vpython",
-  "project_page": "https://github.com/valsr/pr-puppet-vpython",
-  "issues_url": "https://github.com/valsr/pr-puppet-vpython/issues",
+  "summary": "Helps with managment of python3 enviroment, especially installation of modules",
+  "license": "CC-BY-4.0",
+  "source": "https://github.com/valsr/puppet-vpython",
+  "project_page": "https://github.com/valsr/puppet-vpython",
+  "issues_url": "https://github.com/valsr/puppet-vpython/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_requirement": ">=4.0.0 <5.0.0"
+      "version_requirement": ">=5.0.0 <6.0.0"
     },
     {
       "name": "puppet-python",
       "version_requirement": ">=1.0.0 <3.0.0"
+    },
+    {
+      "name": "valsr-vcommon",
+      "version_requirement": ">=0.2.0 < 2.0.0"
     }
-    ],
-  "data_provider": "hiera",
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": ["16.04"]
+      "operatingsystemrelease": [
+        "18.04"
+      ]
     },
     {
       "operatingsystem": "LinuxMint",
-      "operatingsystemrelease": ["18.1", "18.2", "18.3"]
+      "operatingsystemrelease": [
+        "19"
+      ]
     }
-    ],
+  ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=4.0.0 <6.0.0"
+      "version_requirement": ">= 5.0.0 < 6.0.0"
     }
-    ],
-  "description": "",
-  "tags": ["python"]
+  ],
+  "pdk-version": "1.7.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.7.1-0-g810b982"
 }

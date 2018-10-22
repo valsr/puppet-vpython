@@ -1,99 +1,78 @@
 # vpython
 
-## Table of Contents
+#### Table of Contents
 
-1.  [Description](#description)
-1.  [Setup - The basics of getting started with vpython](#setup)
-    * [What vpython affects](#what-vpython-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with vpython](#beginning-with-vpython)
-1.  [Usage - Configuration options and additional functionality](#usage)
-1.  [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-1.  [Limitations - OS compatibility, etc.](#limitations)
-1.  [Development - Guide for contributing to the module](#development)
-1.  [Release Notes](#release-notes)
+1. [Description](#description)
+2. [Build Status](#build-status)
+3. [Setup - The basics of getting started with vpython](#setup)
+   - [What vpython affects](#what-vpython-affects)
+   - [Setup requirements](#setup-requirements)
+   - [Beginning with vpython](#beginning-with-vpython)
+4. [Usage - Configuration options and additional functionality](#usage)
+5. [Limitations - OS compatibility, etc.](#limitations)
+6. [Development - Guide for contributing to the module](#development)
 
 ## Description
 
-vpython module installs and configures Python3 environment. Is addition, it plays nice with other modules allowing
-ad-hoc (runtime) module installation, configuration.
+Aids in installation of common python module by allowing use of puppet include syntax and manages their dependencies.
+
+## Build Status
+
+| Branch      | [Travis-CI](https://travis-ci.org/valsr/puppet-vpython/branches)                      |
+| ----------- | ------------------------------------------------------------------------------------- |
+| stable      | ![latest stable status](https://travis-ci.org/valsr/puppet-vpython.svg?branch=stable) |
+| master      | ![master build status](https://travis-ci.org/valsr/puppet-vpython.svg?branch=master)  |
+| development | N/A                                                                                   |
 
 ## Setup
 
-At most you will need to have vdata installed in order to use hiera data lookups.
+### What vpython affects **OPTIONAL**
 
-### What vpython affects
+Installation of python packages
 
-* Python3 installation (pip, python, virtualenv)
-* Python pip managed modules
+### Setup Requirements **OPTIONAL**
 
-### Setup requirements
-
-Requires stankevich-python module from forge.
+This module depends on **valsr-vcommon** to provide v_ensure_packages. See www.github.com/valsr/puppet-common for
+explanation of what this functions does (TL;DR it provides ability to specify package versions to be installed via
+hiera). Furthermore, **puppet-python** is used to provide python environment and PIP module installation.
 
 ### Beginning with vpython
 
-Including vpython will install a default python 3 enviroment:
-
-* installs python3
-* installs pip3
-* installs virtualenv
-
-```.pp
-include vpython
-```
+Each function/manifest file holds the description on how to use it. You can find more information in the
+[Usage](#usage) section.
 
 ## Usage
 
-Installing Python modules can be accomplished in three ways - classes, pip, and hiera. It is recommended to always use
-classes when possible as they will attempt to install the package native module if possible, if not it will fallback
-to pip installation.
+`::vpython`
 
-### Class PIP modules
+Including vpython (which is usually referenced by the python module) will install a basic python3 environment. This
+currently calls the `::python` class and provide policy based values for what to install:
 
-Modules can be installed by including the correct class as found under pip. This simply calls the pip command wit the
-correct name.
+- policy: **software::install::python** for installing python environment
+- policy: **software::install::python::pip** for installing pip manager
+- policy: **software::install::python::virtualenv** for installing virtual environment
+- policy: **software::install::python::dev** for installing development files
 
-```.pp
-include vpython::pip::autopep8
-```
+Note you don't need to call this before using any of the **vpython::module::X** as they don't depend on it.
 
-### PIP installation
+`::vpython::module::X`
 
-You can also install modules using the python::pip resource declaration as well. Ensure that you have selected an
-unique name when doing so.
-
-```.pp
-python::pip{'my-autopep8':
-    ensure => present,
-    package => 'autopep8'
-    }
-```
-
-### Hiera PIP modules
-
-Since this module uses the stankevich-python module pip, dot, and pyenvs may be setup via hiera using the
-**python::python_pips**, **python::python_dots**, **python_pyvenvs** lookup keys. See the module documentation for more
-information.
-
-## Reference
-
-> Generate documents first by running **puppet strings generate**
-
-See [doc/index.html](doc/index.html) for reference documentation.
+Including any of the provided module will install the module (as based on the software policy -
+**software::install::python::module::X**) and its dependencies (if there are any).
 
 ## Limitations
 
-Module build against Puppet 5.
+Currently only works/tested on:
 
-Tested on:
-
-* Ubuntu 16.04 LTS
+- Ubuntu 18.04
+- LinuxMint 19
 
 ## Development
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+In most cases follow puppet standards/guidelines. In short:
 
-## Release Notes
+- Make sure code is style according puppet [coding styles](https://puppet.com/docs/puppet/5.5/style_guide.html)
+- Each new addition should have a unit test covering most of its functionality (aim for 85% or more)
+- Make sure everything is properly documented (what it does, how it does it, parameters) and has plenty of examples
 
-See [CHANGELOG.md](CHANGELOG.md)
+If so, submit a pull request and if it builds and runs well it will be merged (eventually).
