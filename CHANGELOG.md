@@ -9,6 +9,8 @@
 :exclamation: migrated to pdk
 :hammer: fixed dependencies versions
 
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 1.7.1 (2018-08-02)
 
 :hammer: migrated python module to puppet-python
