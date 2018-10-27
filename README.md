@@ -11,6 +11,7 @@
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Limitations - OS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
+7. [Release Notes](#release-notes)
 
 ## Description
 
@@ -18,10 +19,10 @@ Aids in installation of common python module by allowing use of puppet include s
 
 ## Build Status
 
-| Branch      | [Travis-CI](https://travis-ci.org/valsr/puppet-vpython/branches)                      |
+| Branch      | [Travis-CI](https://travis-ci.com/valsr/puppet-vpython/branches)                      |
 | ----------- | ------------------------------------------------------------------------------------- |
-| stable      | ![latest stable status](https://travis-ci.org/valsr/puppet-vpython.svg?branch=stable) |
-| master      | ![master build status](https://travis-ci.org/valsr/puppet-vpython.svg?branch=master)  |
+| stable      | ![latest stable status](https://travis-ci.com/valsr/puppet-vpython.svg?branch=stable) |
+| master      | ![master build status](https://travis-ci.com/valsr/puppet-vpython.svg?branch=master)  |
 | development | N/A                                                                                   |
 
 ## Setup
@@ -32,9 +33,10 @@ Installation of python packages
 
 ### Setup Requirements **OPTIONAL**
 
-This module depends on **valsr-vcommon** to provide v_ensure_packages. See www.github.com/valsr/puppet-common for
-explanation of what this functions does (TL;DR it provides ability to specify package versions to be installed via
-hiera). Furthermore, **puppet-python** is used to provide python environment and PIP module installation.
+This module depends on **valsr-vcommon** to provide v_ensure_packages. See
+[www.github.com/valsr/puppet-vcommon](www.github.com/valsr/puppet-vcommon) for explanation of what this functions does
+(TL;DR it provides ability to specify package versions to be installed via hiera). Furthermore, **puppet-python** is
+used to provide python environment and PIP module installation.
 
 ### Beginning with vpython
 
@@ -69,10 +71,8 @@ Currently only works/tested on:
 
 ## Development
 
-In most cases follow puppet standards/guidelines. In short:
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-- Make sure code is style according puppet [coding styles](https://puppet.com/docs/puppet/5.5/style_guide.html)
-- Each new addition should have a unit test covering most of its functionality (aim for 85% or more)
-- Make sure everything is properly documented (what it does, how it does it, parameters) and has plenty of examples
+## Release Notes
 
-If so, submit a pull request and if it builds and runs well it will be merged (eventually).
+See [CHANGELOG.md](CHANGELOG.md)

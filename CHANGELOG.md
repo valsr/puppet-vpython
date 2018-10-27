@@ -2,12 +2,22 @@
 
 [< back to readme](README.md)
 
+## 2.0.1 (2018-10-27)
+
+:hammer: removed puppet 4 spec run during build
+:hammer: updated README to correct several links
+:star2: added puppet-catalog_rspec gem for development use
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 2.0.0 (2018-10-18)
 
 :exclamation: now a public repository -> added licenses, project level files, unit tests
 :exclamation: renamed vpython::pip to vpython::module
 :exclamation: migrated to pdk
 :hammer: fixed dependencies versions
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
 
 ## 1.7.1 (2018-08-02)
 
