@@ -19,10 +19,10 @@ Aids in installation of common python module by allowing use of puppet include s
 
 ## Build Status
 
-| Branch      | [Travis-CI](https://travis-ci.org/valsr/puppet-vpython/branches)                      |
+| Branch      | [Travis-CI](https://travis-ci.com/valsr/puppet-vpython/branches)                      |
 | ----------- | ------------------------------------------------------------------------------------- |
-| stable      | ![latest stable status](https://travis-ci.org/valsr/puppet-vpython.svg?branch=stable) |
-| master      | ![master build status](https://travis-ci.org/valsr/puppet-vpython.svg?branch=master)  |
+| stable      | ![latest stable status](https://travis-ci.com/valsr/puppet-vpython.svg?branch=stable) |
+| master      | ![master build status](https://travis-ci.com/valsr/puppet-vpython.svg?branch=master)  |
 | development | N/A                                                                                   |
 
 ## Setup
