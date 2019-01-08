@@ -2,6 +2,13 @@
 
 [< back to readme](README.md)
 
+## 2.0.2 (2018-01-09)
+
+:star2: added documentation linting
+:hammer: removed unused 3rd party tool configs
+
+**Release Manager**: valsr <mailto:valsr@valsr.com>
+
 ## 2.0.1 (2018-10-27)
 
 :hammer: removed puppet 4 spec run during build
