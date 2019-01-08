@@ -3,15 +3,15 @@
 #### Table of Contents
 
 1. [Description](#description)
-2. [Build Status](#build-status)
-3. [Setup - The basics of getting started with vpython](#setup)
+1. [Build Status](#build-status)
+1. [Setup - The basics of getting started with vpython](#setup)
    - [What vpython affects](#what-vpython-affects)
    - [Setup requirements](#setup-requirements)
    - [Beginning with vpython](#beginning-with-vpython)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
-7. [Release Notes](#release-notes)
+1. [Usage - Configuration options and additional functionality](#usage)
+1. [Limitations - OS compatibility, etc.](#limitations)
+1. [Development - Guide for contributing to the module](#development)
+1. [Release Notes](#release-notes)
 
 ## Description
 
